@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="299.0" prefWidth="456.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.andrey.controllers.SupplierTableController">
+  <children>
+    <TableView id="contactTable" fx:id="supplierTable" layoutX="0.0" layoutY="0.0" prefHeight="252.0009375" prefWidth="351.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="176.0" text="Тип" fx:id="supplierTypeColumn" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="174.0" text="Поставщик" fx:id="supplierSupplierColumn" />
+      </columns>
+    </TableView>
+    <Hyperlink layoutX="377.0" layoutY="261.0" onAction="#backToMainStage" text="Назад" />
+    <VBox layoutX="359.0" layoutY="46.0" prefHeight="184.0" prefWidth="82.0" spacing="50.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#addSupplier" prefWidth="74.0" text="Добавить" />
+        <Button mnemonicParsing="false" onAction="#editSupplier" text="Изменить" />
+        <Button mnemonicParsing="false" onAction="#deleteSupplier" prefWidth="74.0" text="Удалить" />
+      </children>
+    </VBox>
+    <HBox layoutX="47.0" layoutY="262.0" prefHeight="22.0" prefWidth="253.0" spacing="90.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#saveData" prefWidth="82.0" text="Сохранить" />
+        <Button mnemonicParsing="false" onAction="#loadData" prefWidth="74.0" text="Загрузить" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="331.0" prefWidth="387.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.andrey.controllers.MainStageController">
+  <children>
+    <Button layoutX="114.0" layoutY="159.0" mnemonicParsing="false" onAction="#selectStoreTable" prefWidth="163.0" text="Таблица &quot;Магазин&quot;" />
+    <Button layoutX="114.0" layoutY="106.0" mnemonicParsing="false" onAction="#selectSellerTable" prefWidth="163.0" text="Таблица &quot;Продавцы&quot;" />
+    <Button id="button1" layoutX="114.0" layoutY="54.0" mnemonicParsing="false" onAction="#selectRegistrationTable" prefWidth="163.0" text="Таблица &quot;Регистрация&quot;" />
+    <Button layoutX="114.0" layoutY="213.0" mnemonicParsing="false" onAction="#selectSupplierTable" prefWidth="163.0" text="Таблица &quot;Поставщик&quot;" />
+    <Button layoutX="114.0" layoutY="265.0" mnemonicParsing="false" onAction="#selectSelect" prefWidth="163.0" text="SELECT" />
+  </children>
+</AnchorPane>

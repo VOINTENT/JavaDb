@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="361.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.andrey.controllers.EditSellerController">
+  <children>
+    <GridPane layoutX="33.0" layoutY="-80.0" prefHeight="172.0" prefWidth="358.0">
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="129.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="229.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Button layoutX="78.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleOK" text="Сохранить" />
+    <Button layoutX="238.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="78.0" text="Отмена" />
+  <Label layoutX="22.0" layoutY="180.0" prefWidth="124.0" text="Цена" />
+  <Label layoutX="22.0" layoutY="214.0" prefWidth="124.0" text="Количество" />
+  <TextField id="phoneTypeFullNameField" fx:id="sellerPriceField" layoutX="151.0" layoutY="176.0" prefWidth="200.0" />
+  <TextField id="phoneTypeFullNameField" fx:id="sellerCountField" layoutX="151.0" layoutY="210.0" prefWidth="200.0" />
+      <Label layoutX="22.0" layoutY="146.0" text="Название" />
+      <Label layoutX="22.0" layoutY="111.0" text="Город" />
+      <Label layoutX="22.0" layoutY="76.0" text="Имя" />
+      <Label fx:id="sellerNameLabel" layoutX="151.0" layoutY="76.0" text="Label" />
+      <Label fx:id="sellerAreaLabel" layoutX="151.0" layoutY="111.0" text="Label" />
+      <Label fx:id="sellerNameProductLabel" layoutX="151.0" layoutY="146.0" text="Label" />
+  </children>
+</AnchorPane>
