@@ -18,13 +18,13 @@ import java.util.ResourceBundle;
 public class EditSellerController implements Initializable {
 
     @FXML
-    private Label sellerNameLabel;
+    private TextField sellerNameField;
 
     @FXML
-    private Label sellerAreaLabel;
+    private TextField sellerAreaField;
 
     @FXML
-    private Label sellerNameProductLabel;
+    private TextField sellerNameProductField;
 
     @FXML
     private TextField sellerPriceField;
@@ -47,13 +47,16 @@ public class EditSellerController implements Initializable {
         this.seller = seller;
 
         if (seller.getName() != null) {
-            sellerNameLabel.setText(seller.getName().toString());
+            sellerNameField.setText(seller.getName());
+            sellerNameField.setDisable(true);
         }
         if (seller.getArea() != null) {
-            sellerAreaLabel.setText(seller.getArea().toString());
+            sellerAreaField.setText(seller.getArea());
+            sellerAreaField.setDisable(true);
         }
         if (seller.getNameProduct() != null) {
-            sellerNameProductLabel.setText(seller.getNameProduct().toString());
+            sellerNameProductField.setText(seller.getNameProduct());
+            sellerNameProductField.setDisable(true);
         }
         if (seller.getPrice() != null) {
             sellerPriceField.setText(seller.getPrice().toString());
@@ -74,6 +77,9 @@ public class EditSellerController implements Initializable {
         try {
             seller.setPrice(Integer.parseInt(sellerPriceField.getText()));
             seller.setCount(Integer.parseInt(sellerCountField.getText()));
+            seller.setNameProduct(sellerNameProductField.getText());
+            seller.setName(sellerNameField.getText());
+            seller.setArea(sellerAreaField.getText());
 
             okClicked = true;
             dialogStage.close();

@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class EditRegistrationController implements Initializable {
     @FXML
-    private Label registrationNameLabel;
+    private TextField registrationNameField;
 
     @FXML
     private TextField registrationDateField;
@@ -37,7 +37,8 @@ public class EditRegistrationController implements Initializable {
         this.registration = registration;
 
         if (registration.getName() != null) {
-            registrationNameLabel.setText(registration.getName().toString());
+            registrationNameField.setText(registration.getName());
+            registrationNameField.setDisable(true);
         }
         if (registration.getDate() != null) {
             registrationDateField.setText(registration.getDate().toString());
@@ -56,6 +57,7 @@ public class EditRegistrationController implements Initializable {
     // Нажатие кнопки "OK"
     private void handleOK() {
         try {
+            registration.setName(registrationNameField.getText());
             registration.setDate(Date.valueOf(registrationDateField.getText()));
             registration.setCountPositions(Integer.parseInt(registrationCountPositionsField.getText()));
 

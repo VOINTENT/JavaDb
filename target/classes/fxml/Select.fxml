@@ -7,10 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="148.0" prefWidth="417.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.andrey.controllers.SelectController">
+<AnchorPane fx:id="anchorPane" prefHeight="334.0" prefWidth="417.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.andrey.controllers.SelectController">
   <children>
     <Button layoutX="323.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleEnter" prefHeight="25.0" prefWidth="70.0" text="Ввод" />
     <TextField id="phoneTypeFullNameField" fx:id="selectField" layoutX="25.0" layoutY="60.0" prefHeight="25.0" prefWidth="282.0" />
-    <Hyperlink layoutX="336.0" layoutY="112.0" onAction="#backToMainStage" text="Назад" />
+    <Hyperlink layoutX="354.0" layoutY="298.0" onAction="#backToMainStage" text="Назад" />
+    <TextArea fx:id="resultArea" layoutX="14.0" layoutY="112.0" prefWidth="389.0" wrapText="true" />
   </children>
 </AnchorPane>

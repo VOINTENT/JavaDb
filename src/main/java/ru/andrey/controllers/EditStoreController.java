@@ -15,10 +15,10 @@ import java.util.ResourceBundle;
 public class EditStoreController implements Initializable {
 
     @FXML
-    private TextField storeTypeField;
+    private TextField storeNameField;
 
     @FXML
-    private Label storeNameLabel;
+    private TextField storeTypeField;
 
     private Stage dialogStage;
     private Store store;
@@ -33,14 +33,11 @@ public class EditStoreController implements Initializable {
     public void setStore(Store store) {
         this.store = store;
         if (store.getName() != null) {
-            storeNameLabel.setText(store.getName());
-        } else {
-            storeNameLabel.setText("");
+            storeNameField.setText(store.getName());
+            storeNameField.setDisable(true);
         }
         if (store.getType() != null) {
             storeTypeField.setText(store.getType());
-        } else {
-            storeTypeField.setText("");
         }
     }
 
@@ -54,6 +51,7 @@ public class EditStoreController implements Initializable {
     private void handleOK() {
         try {
             store.setType(storeTypeField.getText());
+            store.setName(storeNameField.getText());
 
             okClicked = true;
             dialogStage.close();

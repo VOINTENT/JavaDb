@@ -3,6 +3,7 @@ package ru.andrey.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -27,6 +28,9 @@ public class SelectController implements Initializable {
 
     @FXML
     private TextField selectField;
+
+    @FXML
+    private TextArea resultArea;
 
     @FXML
     // Нажатие кнопки "Ввод"
@@ -63,12 +67,14 @@ public class SelectController implements Initializable {
             }
         }
 
-
+        String result = new String();
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data[i].length; j++) {
-                System.out.print(data[i][j] + " ");
+                result += (data[i][j] + " ");
             }
+            result += "\r\n";
         }
+        resultArea.setText(result);
     }
 
     @FXML

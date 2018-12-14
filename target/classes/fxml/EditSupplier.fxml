@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="245.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.andrey.controllers.EditSupplierController">
+<AnchorPane prefHeight="245.0" prefWidth="458.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ru.andrey.controllers.EditSupplierController">
   <children>
     <GridPane layoutX="53.0" layoutY="68.0" prefHeight="85.0" prefWidth="353.0">
       <children>
         <Label prefWidth="124.0" text="Тип" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <Label prefWidth="124.0" text="Поставщик" GridPane.columnIndex="0" GridPane.rowIndex="1" />
         <TextField id="phoneTypeFullNameField" fx:id="supplierSupplierField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="supplierTypeLabel" text="Label" GridPane.columnIndex="1" />
+        <TextField id="phoneTypeFullNameField" fx:id="supplierTypeField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
       </children>
       <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="128.0" />

@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class EditSupplierController implements Initializable {
 
     @FXML
-    private Label supplierTypeLabel;
+    private TextField supplierTypeField;
 
     @FXML
     private TextField supplierSupplierField;
@@ -35,14 +35,11 @@ public class EditSupplierController implements Initializable {
         this.supplier = supplier;
 
         if (supplier.getType() != null) {
-            supplierTypeLabel.setText(supplier.getType());
-        } else {
-            supplierTypeLabel.setText("");
+            supplierTypeField.setText(supplier.getType());
+            supplierTypeField.setDisable(true);
         }
         if (supplier.getSupplier() != null) {
             supplierSupplierField.setText(supplier.getSupplier());
-        } else {
-            supplierSupplierField.setText("");
         }
     }
 
@@ -55,8 +52,8 @@ public class EditSupplierController implements Initializable {
     // Нажатие кнопки "OK"
     private void handleOK() {
         try {
-            supplier.setType(supplierSupplierField.getText());
-
+            supplier.setType(supplierTypeField.getText());
+            supplier.setSupplier(supplierSupplierField.getText());
             okClicked = true;
             dialogStage.close();
         } catch (IllegalArgumentException e) {
